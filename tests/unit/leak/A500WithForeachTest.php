@@ -4,7 +4,7 @@ namespace test\unit\common\leak;
 
 use Codeception\Test\Unit;
 
-class A500Test extends Unit
+class A500WithForeachTest extends Unit
 {
 
     /**
@@ -17,8 +17,11 @@ class A500Test extends Unit
 
     public function providerForFoo()
     {
+        $result = [];
         foreach (range(1, 500) as $i) {
-            yield ['smth' => 'bar'];
+            $result[] = ['smth' => 'bar'];
         }
+
+        return $result;
     }
 }

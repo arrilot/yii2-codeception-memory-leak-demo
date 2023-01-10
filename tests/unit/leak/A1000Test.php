@@ -4,7 +4,7 @@ namespace test\unit\common\leak;
 
 use Codeception\Test\Unit;
 
-class TwoTest extends Unit
+class A1000Test extends Unit
 {
     /**
      * @dataProvider providerForFoo
